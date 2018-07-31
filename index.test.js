@@ -124,28 +124,29 @@ test(
     }
 )
 
-test(
-    'If gradient-css generates correct css radial gradient with the shape of a ellipse, the position and the extent keyword',
-    () => {
-        const css = new Css([
-            [10, 220, 33, 0.1],
-            [254, 200, 10, 1]
-        ], {
-            base: {
-                interpolation: 'linear',
-                samples: 10,
-                mode: 'hsl',
-                lightessCorrection: true
-            },
-            css: {
-                type: 'radial',
-                top: 30,
-                left: 20,
-                shape: 'ellipse'
-            }
-        })
-        const regexp = /radial-gradient\((\s?at(\s[0-9]+%)+\,?\s?)(rgba\(([0-9]+\,\s?)+([0-9]?\.?[0-9]+\)\,?\s?))+\)/
-        const gradient = css.get()
-        expect(regexp.test(gradient)).toBe(true)
-    }
-)
+// test(
+//     'If gradient-css generates correct css radial gradient with the shape of a ellipse, the position and the extent keyword',
+//     () => {
+//         const css = new Css([
+//             [10, 220, 33, 0.1],
+//             [254, 200, 10, 1]
+//         ], {
+//             base: {
+//                 interpolation: 'bezier',
+//                 samples: 10,
+//                 mode: 'lch',
+//                 lightessCorrection: true
+//             },
+//             css: {
+//                 type: 'radial',
+//                 top: 30,
+//                 left: 20,
+//                 shape: 'ellipse'
+//             }
+//         })
+//         const regexp = /radial-gradient\((\s?at(\s[0-9]+%)+\,?\s?)(rgba\(([0-9]+\,\s?)+([0-9]?\.?[0-9]+\)\,?\s?))+\)/
+//         const gradient = css.get()
+//         console.log(gradient)
+//         expect(regexp.test(gradient)).toBe(true)
+//     }
+// )
