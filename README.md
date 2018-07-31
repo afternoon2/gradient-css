@@ -1,4 +1,4 @@
-# gradient-base.js
+# gradient-css.js
 
 This module creates css gradient output for gradient.js modules.
 
@@ -37,4 +37,17 @@ const css = new Css([
 })
 
 const gradient = css.get()
+```
+
+## Options
+
+```typescript
+{
+    type: 'linear' | 'radial'
+    angle?: number // 0-359
+    top?: number // 0-100
+    left?: number // 0-100
+    shape: 'ellipse' | 'circle'
+    extent: 'farthest-side' | 'closest-side' | 'farthest-corner' | 'closest-corner'
+}
 ```
