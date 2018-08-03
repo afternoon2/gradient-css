@@ -18,7 +18,9 @@ gradient.js is a javascript module that takes your source colors array and confi
 ## Usage
 
 ```javascript
-const css = new Css([
+const css = new Css()
+
+const gradient = css.get([
     [100, 34, 230, 0.5],
     [10, 33, 20, 0.6],
     [1, 12, 12, 0.3]
@@ -36,8 +38,6 @@ const css = new Css([
         shape: 'circle'
     }
 })
-
-const gradient = css.get()
 ```
 
 ## Options
