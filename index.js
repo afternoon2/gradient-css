@@ -1,4 +1,4 @@
-import { DOMLayer } from 'gradient-base'
+import { _init } from 'gradient-base'
 
 /**
  * @typedef {(number[][]|string[])} Colors - colors input 
@@ -30,24 +30,34 @@ import { DOMLayer } from 'gradient-base'
 
 /**
  * @class Css
- * @extends {DOMLayer}
  * @classdesc
- * @param {Colors} colors
- * @param {Options} options
  * Css overlay class that returns single gradient strings
  */
-export default class Css extends DOMLayer {
-    constructor(colors, options) {
-        super(colors, options)
-    }
+export default class Css {
+    constructor() {}
 
     /**
      * @returns {string}
-     * @description
      * Returns single css gradient string
+     * @param {Colors} colors
+     * @param {Options} options
      */
-    get() {
+    get(colors, options) {
+        this._init(colors, options)
         return `${this.options.css.type}-gradient(${this._angle}${this._shape}${this._extent}${this._stringifyColors()})`
+    }
+
+    /**
+     * Creates base and assigns colors and options to a constructor
+     * @param {Colors} colors 
+     * @param {Options} options 
+     * @returns {void}
+     * @private
+     */
+    _init(colors, options) {
+        const initialContent = _init(colors, options)
+        this.colors = initialContent.colors
+        this.options = initialContent.options
     }
 
     /**
