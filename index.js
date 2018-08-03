@@ -45,7 +45,7 @@ export default class Css {
         this._base = new Base(colors, options.base)
 
         /**
-         * @property {Colors} colors
+         * @property {number[][]} colors
          */
         this.colors = this._base.get()
 
