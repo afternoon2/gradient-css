@@ -5,6 +5,7 @@ This module creates css gradient output for gradient.js modules.
 ## Table of contents
 * [gradient.js](#gradient.js)
 * [Usage](#usage)
+* [Options](#options)
 
 ---
 ## gradient.js
@@ -44,10 +45,15 @@ const gradient = css.get()
 ```typescript
 {
     type: 'linear' | 'radial'
-    angle?: number // 0-359
-    top?: number // 0-100
-    left?: number // 0-100
+    angle?: number // between 0 and 359
     shape: 'ellipse' | 'circle'
-    extent: 'farthest-side' | 'closest-side' | 'farthest-corner' | 'closest-corner'
+    top?: number
+    left?: number
+    extent?: 'farthest-side' | 'closest-side' | 'farthest-corner' | 'closest-corner'
 }
 ```
+The `angle` is ommited when the `type` is set to `radial`.
+
+The `extent` keyword is ignored if the shape is set to the `circle` and the `type` is set to `linear`.
+
+When you set the `type` to `radial`, you must provide valid `shape` property.

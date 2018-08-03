@@ -1,6 +1,10 @@
 import Base from 'gradient-base'
 
 /**
+ * @typedef {(number[][]|string[])} Colors - colors input 
+ */
+
+/**
  * @typedef {object} CssOptions - CssOverlay component's configuration object
  * @property {string} type - 'linear' or 'radial'
  * @property {number} [angle] - linear gradient's angle value
@@ -14,7 +18,7 @@ import Base from 'gradient-base'
  * @class CssOverlay
  * @extends Overlay
  * @classdesc
- * @param {number[][]} colors
+ * @param {Colors} colors
  * @param {CssOptions} options
  * Css overlay class that returns single gradient strings
  */
@@ -25,12 +29,6 @@ export default class Css {
          * @private
          */
         this._base = new Base(colors, options.base)
-        
-        /**
-         * @property {number[][]} _rawColors
-         * @private
-         */
-        this._rawColors = this._base.get()
 
         /**
          * @property {Colors} colors
