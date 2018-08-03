@@ -34,13 +34,7 @@ import { _init } from 'gradient-base'
  * Css overlay class that returns single gradient strings
  */
 export default class Css {
-    constructor() {
-        /**
-         * @property {(Base|null)} _base - Base component local instance
-         * @private
-         */
-        this._base = null
-    }
+    constructor() {}
 
     /**
      * @returns {string}
@@ -49,21 +43,8 @@ export default class Css {
      * @param {Options} options
      */
     get(colors, options) {
-        this._init(colors, options)
+        _init(this, colors, options)
         return `${this.options.css.type}-gradient(${this._angle}${this._shape}${this._extent}${this._stringifyColors()})`
-    }
-
-    /**
-     * Creates base and assigns colors and options to a constructor
-     * @param {Colors} colors 
-     * @param {Options} options 
-     * @returns {void}
-     * @private
-     */
-    _init(colors, options) {
-        const initialContent = _init(this, colors, options)
-        this.colors = initialContent.colors
-        this.options = initialContent.options
     }
 
     /**
