@@ -5,7 +5,15 @@ import Base from 'gradient-base'
  */
 
 /**
- * @typedef {object} CssOptions - CssOverlay component's configuration object
+ * @typedef {object} BaseOptions - Base configuration object
+ * @property {string} interpolation - 'linear' or 'bezier'
+ * @property {string} [mode] - 'none', 'lch', 'lab', 'rgb', 'hsv', 'hsl', 'hsi', or 'hcl' (only for linear interpolation)
+ * @property {number} samples - number of output colors
+ * @property {boolean} lightnessCorrection - lightness correction applier
+ */
+
+/**
+ * @typedef {object} CssOptions - Css configuration object
  * @property {string} type - 'linear' or 'radial'
  * @property {number} [angle] - linear gradient's angle value
  * @property {number} [left] - radial gradient's position on the x axis
@@ -15,11 +23,17 @@ import Base from 'gradient-base'
  */
 
 /**
+ * @typedef {object} Options 
+ * @property {BaseOptions} base
+ * @property {CssOptions} css
+ */
+
+/**
  * @class CssOverlay
  * @extends Overlay
  * @classdesc
  * @param {Colors} colors
- * @param {CssOptions} options
+ * @param {Options} options
  * Css overlay class that returns single gradient strings
  */
 export default class Css {
@@ -36,7 +50,7 @@ export default class Css {
         this.colors = this._base.get()
 
         /**
-         * @property {CssOptions} options
+         * @property {Options} options
          */
         this.options = options
     }
