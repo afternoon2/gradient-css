@@ -1,4 +1,4 @@
-import Base from 'gradient-base'
+import { DOMLayer } from 'gradient-base'
 
 /**
  * @typedef {(number[][]|string[])} Colors - colors input 
@@ -29,30 +29,16 @@ import Base from 'gradient-base'
  */
 
 /**
- * @class CssOverlay
- * @extends Overlay
+ * @class Css
+ * @extends {DOMLayer}
  * @classdesc
  * @param {Colors} colors
  * @param {Options} options
  * Css overlay class that returns single gradient strings
  */
-export default class Css {
+export default class Css extends DOMLayer {
     constructor(colors, options) {
-        /**
-         * @property {Base} _base
-         * @private
-         */
-        this._base = new Base(colors, options.base)
-
-        /**
-         * @property {number[][]} colors
-         */
-        this.colors = this._base.get()
-
-        /**
-         * @property {Options} options
-         */
-        this.options = options
+        super(colors, options)
     }
 
     /**
