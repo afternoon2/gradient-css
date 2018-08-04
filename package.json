@@ -2,8 +2,7 @@
   "name": "gradient-css",
   "version": "0.0.0-development",
   "description": "Css module of the gradient.js library",
-  "browser": "dist/gradient-css.umd.js",
-  "module": "dist/gradient-css.mjs",
+  "main": "gradient-css.js",
   "scripts": {
     "dev": "rollup -c",
     "test": "jest --coverage && codecov",

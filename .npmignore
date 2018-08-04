@@ -1,0 +1,10 @@
+docs
+coverage
+.babelrc
+.eslintignore
+.eslintrc
+.travis.yml
+index.js
+index.test.js
+jest.config.js
+rollup.config.js

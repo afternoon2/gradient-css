@@ -22,16 +22,8 @@ export default {
         {
             extend: true,
             format: 'umd',
-            file: './dist/gradient-css.umd.js',
-            name: 'Css',
-            sourcemap: true
-        },
-        {
-            extend: true,
-            format: 'es',
-            file: './dist/gradient-css.mjs',
-            name: 'Css',
-            sourcemap: true
+            file: './gradient-css.js',
+            name: 'Css'
         }
     ],
     watch: {

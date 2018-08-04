@@ -1,4 +1,4 @@
 node_modules/
 .vscode
-dist
+gradient-css.js
 coverage
