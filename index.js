@@ -1,4 +1,4 @@
-import { _init } from 'gradient-base'
+import Base from 'gradient-base'
 
 /**
  * @typedef {(number[][]|string[])} Colors - colors input 
@@ -43,8 +43,19 @@ export default class Css {
      * @param {Options} options
      */
     get(colors, options) {
-        _init(this, colors, options)
+        this._init(colors, options)
         return `${this.options.css.type}-gradient(${this._angle}${this._shape}${this._extent}${this._stringifyColors()})`
+    }
+
+    /**
+     * Creates base and options properties
+     * @private
+     * @returns {void}
+     */
+    _init(colors, options) {
+        this._base = new Base()
+        this.colors = this._base.get(colors, options.base)
+        this.options = options
     }
 
     /**

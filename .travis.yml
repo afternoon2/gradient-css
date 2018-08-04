@@ -5,10 +5,7 @@ cache:
 notifications:
   email: false
 node_js:
-  - '10'
-  - '9'
-  - '8'
-  - '6'
+  - "8.5.0"
 
 script:
   - npm run test
