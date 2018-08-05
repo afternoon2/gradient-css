@@ -16,6 +16,8 @@ This module creates css gradient output for gradient.js modules.
 
 gradient.js is a javascript module that takes your source colors array and configuration object, and returns a gradient suitable for your needs.
 
+Gradient maker uses chroma-js color manipulation library for gradient generation (Copyright (c) 2011-2017, Gregor Aisch).
+
 ---
 
 ## Usage
