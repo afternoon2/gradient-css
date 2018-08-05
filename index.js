@@ -49,18 +49,9 @@ export default class Css {
      * @param {Options} options
      */
     get(colors, options) {
-        this._init(colors, options)
-        return `${this.options.css.type}-gradient(${this._angle}${this._shape}${this._extent}${this._stringifyColors()})`
-    }
-
-    /**
-     * Creates base and options properties
-     * @private
-     * @returns {void}
-     */
-    _init(colors, options) {
         this.colors = this._base.get(colors, options.base)
         this.options = options
+        return `${this.options.css.type}-gradient(${this._angle}${this._shape}${this._extent}${this._stringifyColors()})`
     }
 
     /**
