@@ -14,21 +14,18 @@ const babelConf = {
 export default {
     input: 'index.js',
     external: ['chroma-js', 'gradient-base'],
-    globals: {
-        'chroma-js': 'chroma',
-        'gradient-base': 'Base'
-    },
     output: [
         {
             extend: true,
             format: 'umd',
             file: './gradient-css.js',
-            name: 'Css'
+            name: 'Css',
+            globals: {
+                'chroma-js': 'chroma',
+                'gradient-base': 'Base'
+            }
         }
     ],
-    watch: {
-        include: 'src/**'
-    },
     plugins: [
         resolve(),
         eslint(eslintConf),
