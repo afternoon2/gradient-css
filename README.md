@@ -1,6 +1,9 @@
 # gradient-css.js
-
 This module creates css gradient output for gradient.js modules.
+
+<!-- [![License](https://img.shields.io/npm/l/gradient-css.svg?style=flat)](https://github.com/afternoon2/gradient-css/blob/master/LICENSE)&nbsp;&nbsp; -->
+[![Travis build](https://img.shields.io/travis/afternoon2/gradient-css.svg?style=flat)](https://travis-ci.org/afternoon2/gradient-css)&nbsp;&nbsp;[![Codecov](https://img.shields.io/codecov/c/github/afternoon2/gradient-css.svg?style=flat)](https://codecov.io/gh/afternoon2/gradient-css)
+
 
 ## Table of contents
 * [gradient.js](#gradient.js)
