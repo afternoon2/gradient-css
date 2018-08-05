@@ -1,6 +1,6 @@
 {
   "name": "gradient-css",
-  "version": "0.0.0-development",
+  "version": "1.0.1",
   "description": "Css module of the gradient.js library",
   "main": "gradient-css.js",
   "scripts": {
