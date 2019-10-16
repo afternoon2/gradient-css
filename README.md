@@ -1,3 +1,6 @@
+# Deprecated
+## Better check [gradient-js](https://github.com/afternoon2/gradient-js).
+
 # gradient-css.js
 This module creates css gradient output for gradient.js modules.
 

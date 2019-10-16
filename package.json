@@ -43,14 +43,6 @@
     "chroma-js": "^1.3.7",
     "gradient-base": "^1.0.4"
   },
-  "config": {
-    "commitizen": {
-      "path": "node_modules/cz-conventional-changelog"
-    },
-    "ghooks": {
-      "pre-commit": "npm run test"
-    }
-  },
   "jest": {
     "coverageThreshold": {
       "global": {
